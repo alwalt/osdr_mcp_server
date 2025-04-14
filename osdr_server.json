@@ -1,0 +1,10 @@
+{
+    "mcpServers": {
+        "osdr_server": {
+            "command": "/home/walt/mcp_server/venv/bin/python",
+            "args": [
+                "osdr_mcp.py"
+            ]
+    }
+}   
+}

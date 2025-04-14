@@ -1,0 +1,8 @@
+# Ignore virtual environment
+venv/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore mcp-use directory
+mcp-use/
