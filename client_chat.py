@@ -1,4 +1,3 @@
-# ollama_server.py
 import asyncio
 import os
 from dotenv import load_dotenv
@@ -25,8 +24,8 @@ from langchain_ollama import ChatOllama
 
 async def main():
     load_dotenv()
-    client = MCPClient.from_config_file(os.path.join(os.path.dirname(__file__), "multi_mcp.json"))
-    llm = ChatOllama(model="llama3.1", temperature=0)
+    client = MCPClient.from_config_file(os.path.join(os.path.dirname(__file__), "mcp_config.json"))
+    llm = ChatOllama(model="llama3.1", temperature=0,)
     agent = MCPAgent(llm=llm, client=client, max_steps=30)
 
     print("🧠 MCP Agent is ready.")

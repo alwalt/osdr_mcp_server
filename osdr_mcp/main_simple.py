@@ -5,8 +5,8 @@ import httpx
 
 mcp = FastMCP("OSDR_MCP_Server")
 
-@mcp.tool()
-async def fetch_study_metadata(dataset_id: str) -> dict:
+@mcp.tool(description="Fetch dataset metadata from the NASA OSDR API.")
+async def osdr_fetch_metadata(dataset_id: str) -> dict:
     """
     Fetch minimal metadata needed for terminal comparison.
     """
@@ -31,3 +31,4 @@ async def fetch_study_metadata(dataset_id: str) -> dict:
 
 if __name__ == "__main__":
     mcp.run(transport='stdio')
+    

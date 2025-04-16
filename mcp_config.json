@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "find_osdr_studies": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "/Users/woalvara/osdr_mcp_server/osdr_mcp/",
+                "run",
+                "main_simple.py"
+            ]
+        }
+    }
+}
