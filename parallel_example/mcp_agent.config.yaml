@@ -1,0 +1,44 @@
+$schema: ../../schema/mcp-agent.config.schema.json
+
+execution_engine: asyncio
+logger:
+  transports: [console, file]
+  level: debug
+  progress_display: true
+  path_settings:
+    path_pattern: "logs/mcp-agent-{unique_id}.jsonl"
+    unique_id: "timestamp" # Options: "timestamp" or "session_id"
+    timestamp_format: "%Y%m%d_%H%M%S"
+
+mcp:
+  servers:
+    fetch:
+      command: "uvx"
+      args: ["mcp-server-fetch"]
+    filesystem:
+      command: "npx"
+      args: ["-y", "@modelcontextprotocol/server-filesystem"]
+    osdr_data_fetch: {
+            command: "uv",
+            args: [
+                "--directory",
+                "/Users/woalvara/mcp_agents/parallel_example/osdr_mcp/",
+                "run",
+                "osdr_data_fetch.py"
+            ]
+        }
+    osdr_viz_tools: {
+          command: "uv",
+          args: [
+            "--directory",
+            "/Users/woalvara/mcp_agents/parallel_example/osdr_mcp/",
+            "run",
+            "osdr_viz_tools.py"
+          ]
+        }
+      
+
+openai:
+  base_url: "http://localhost:11434/v1"
+  api_key: ollama
+  default_model: llama3.2

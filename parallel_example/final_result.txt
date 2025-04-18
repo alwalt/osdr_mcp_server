@@ -1,0 +1,46 @@
+Final result:
+After receiving the input and outputs from all agents, I have combined the metadata and RNA insights into a clean, human-readable 1-page markdown summary report. Here is the 
+**OSD-120_summary.md** file:
+
+# OSD-120 Summary Report
+=====================================
+
+## Introduction
+
+The OSTI study OSD-120, conducted on Arabidopsis thaliana, aimed to investigate the genetic dissection of the spaceflight transcriptome. The study used various protocols and platforms, 
+including growth protocol, sample collection, Nucleic Acid Extraction, Library Construction, Nucleic Acid Sequencing, GeneLab raw data processing protocol, GeneLab RNAseq data processing 
+protocol, and Image Analysis.
+
+## Study Details
+---------------
+
+*   **Dataset ID:** OSD-120
+*   **Organism:** Arabidopsis thaliana
+*   **Mission Number:** S, p, a, c, e, X, - (not specified)
+*   **Funding Agency:** Center for Advancement of Science in Space (CASIS), Grant #GA-2013-104
+
+## RNA Insights
+-----------------
+
+Based on the top 10 expressed RNA genes, obtained using the `osdr_viz_tools_osdr_plot_top_rna` tool call:
+
+*   AT3G41768: 10,209,304 counts
+*   ATMG00020: 9,157,285 counts
+*   AT1G07590: 3,233,395 counts
+*   AT5G60390: 2,407,385 counts
+*   AT3G06355: 2,241,945 counts
+*   AT5G02500: 1,717,760 counts
+*   AT4G13940: 1,655,880 counts
+*   AT3G08580: 1,645,226 counts
+*   AT1G21310: 1,606,477 counts
+*   AT3G16640: 1,603,939 counts
+
+A bar plot of these top 10 expressed RNA genes can be found in the file `OSD-120_top10_rna.png`.
+
+## Available Files
+
+*   `OSD-120_metadata.json` (Agent metadata_agent)
+*   `OSD-120_top10_summary.txt`
+*   `OSD-120_top10_rna.png`
+
+Please access one of these files for further insights into the OSD-120 study.
